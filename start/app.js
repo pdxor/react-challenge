@@ -96,7 +96,7 @@ const App = (props) => {
     <div className="container"> 
           {props.initialPlanets.map( planets =>
         <Planet 
-        //you dont have to define every prop like the commen ted code below becuase the names are the same
+        //Spread Operator. So you dont have to define every prop like the commen ted code below becuase the names are the same
         {...planets}
         key = {planets.id}
           // name = {planets.name}
