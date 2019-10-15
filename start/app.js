@@ -83,7 +83,7 @@ const Planet = (props) => {
         <h3>Planet Profile</h3>
         <ul>
           <li><strong>Diameter:</strong>{props.diameter}</li>
-          <li><strong>Moons:</strong>{props.moon}</li>
+          <li><strong>Moons:</strong>{props.moons}</li>
         </ul>
       </div>
 
@@ -96,12 +96,14 @@ const App = (props) => {
     <div className="container"> 
           {props.initialPlanets.map( planets =>
         <Planet 
-          id = {planets.id}
-          name = {planets.name}
-          diameter = {planets.diameter}
-          moons = {planets.moons}
-          desc = {planets.desc}
-          url = {planets.url}
+        //you dont have to define every prop like the commen ted code below becuase the names are the same
+        {...planets}
+        key = {planets.id}
+          // name = {planets.name}
+          // diameter = {planets.diameter}
+          // moons = {planets.moons}
+          // desc = {planets.desc}
+          // url = {planets.url}
         />
       )}
 
